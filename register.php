@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
         $run = mysqli_query($conn,$sql);
         if($run){
             // header("Location: user.html");
-            $_SESSION['rsuccess']="data submitted successfully";
+            $_SESSION['registersuccess']="data submitted successfully";
             header("location:loginmain.php");
           
     }

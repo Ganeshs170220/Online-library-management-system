@@ -12,22 +12,28 @@ if(isset($_POST['submit'])){
     $_SESSION['aadharid']=$_POST["aadharid"];
     $studentphno = $_POST["studentphno"];
     $selectthebook = $_POST["selectthebook"]; 
+    
     if($studentid=="" && $studentname=="" && $aadharid="" && $studentphno = "" && $selectthebook = "")
     {
         $_SESSION['error']="fill all fields";
         header("location:apply.php");
+       
     }   
     else if ((isset($_POST['studentid']) && !empty(($_POST['studentid']))) && (isset($_POST['studentname']) && !empty(($_POST['studentname'])))&& (isset($_POST['aadharid']) && !empty(($_POST['aadharid']))) && (isset($_POST['studentphno']) && !empty(($_POST['studentphno']))) && (isset($_POST['selectthebook']) && !empty(($_POST['selectthebook']))))
     {
+        // echo "success";
         $aadharid = $_POST["aadharid"];
         $studentid = $_POST["studentid"];
-        $sql = "SELECT * FROM profiledata WHERE aadharid='" . $_POST["aadharid"] . "' AND studentid='" . $_POST["studentid"] . "'";
+        $sql = "SELECT * FROM profiledata WHERE aadharid='$aadharid' AND studentid='$studentid'";
         $result = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) === 1) {
+            echo "success";
             $row = mysqli_fetch_assoc($result);
+            echo "success";
             if($row['aadharid'] === $aadharid && $row['studentid'] === $studentid && $row['studentname'] === $studentname && $row['studentphno'] === $studentphno)
                 {
                     // $_SESSION['uniqueid']=$row['id'];
+                    // echo "success";
                     $_SESSION['studentid']=$row['studentid'];
                     $_SESSION['studentname']=$row['studentname'];
                     $_SESSION['aadharid']=$row['aadharid'];

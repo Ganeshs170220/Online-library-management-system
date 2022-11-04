@@ -15,20 +15,28 @@ if(isset($_POST["submit"])){
     $aadharid = $_POST["aadharid"];
     $sql2 = "SELECT * FROM profiledata WHERE aadharid='" . $_POST["aadharid"] . "'";
     $result2 = mysqli_query($conn, $sql2);
-        if (mysqli_num_rows($result2) === 1) {
-            $row2 = mysqli_fetch_assoc($result2);
-            if($row2['aadharid'] === $aadharid)
-                {
-                    // $_SESSION['aadhar_id'] = $row2['aadhar_id'];
-
+    echo "submit";
+    if (mysqli_num_rows($result2) === 1) {
     $sql = "UPDATE `profiledata` SET studentid='$_POST[studentid]',studentname='$_POST[studentname]',studentphno='$_POST[studentphno]',year='$_POST[year]',gender='$_POST[gender]',branch='$_POST[branch]' Where studentid='$_POST[studentid]'";
-    $run = mysqli_query($conn,$sql);
-    $year = $_SESSION['year'];
-    }
+    $run4 = mysqli_query($conn,$sql);
+    //    echo "updated";
+    $_SESSION['year']=$year;
+    $_SESSION['gender']=$gender;
+    $_SESSION['branch']=$branch;
+}
     else{
-        echo "<script>alert('invalid details');</script>";
+        $sql4 =" INSERT INTO `profiledata`(`studentid`, `aadharid`, `studentname`, `studentphno`, `year`, `gender`, `branch`) VALUES ('$studentid','$aadharid','$studentname','$studentphno','$year','$gender','$branch')";
+        $run4 = mysqli_query($conn,$sql4);
+        $_SESSION['year']=$year;
+        $_SESSION['gender']=$gender;
+        $_SESSION['branch']=$branch;
+        $_SESSION['studentid']=$studentid;
+        $_SESSION['aadharid']=$aadharid;
+        $_SESSION['studentphno']=$studentphno;
+        $_SESSION['studentname']=$studentname;
     }
-    if($run){
+}
+    if($run4){
         $_SESSION['profileupdate']='updated';
         header("location:profilemain.php");
         // header("Location: user.html");
@@ -37,9 +45,4 @@ if(isset($_POST["submit"])){
     else{
         echo "form submission failed";
     }
-}}
-else{
-    echo "connecion failed";
-}
 ?>
-

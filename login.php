@@ -49,7 +49,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['aadh
     
     }else{
 
-        
+        echo "success main";
         $sql = "SELECT * FROM logindetails WHERE username='". $_POST["username"] . "'AND password='" . $_POST["password"] . "' ";
         // $sql2 = "SELECT * FROM logindetails WHERE aadhar_id='" . $_POST["aadhar_id"] . "'";
         $result = mysqli_query($conn, $sql);
@@ -60,32 +60,39 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['aadh
         if (mysqli_num_rows($result) === 1) {
 
             $row = mysqli_fetch_assoc($result);
+            echo "succes main2";
             
             if ($row['username'] === $username && $row['password'] === $password ) {
 
                 // if(mysqli_num_rows($result2)===1){
                 //     $row2 = mysqli_fetch_assoc($result2);
+
+                
                 if($row['aadhar_id'] === $aadhar_id)
                 {
                 // echo "Logged in!";
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['password'] = $row['password'];
                 $_SESSION['aadhar_id'] = $row['aadhar_id'];
-                
+                header("Location: user.php");
                 $aadhar_id = $_POST["aadhar_id"];
                 $sql2 = "SELECT * FROM profiledata WHERE aadharid='" . $_POST["aadhar_id"] . "'";
                 $result2 = mysqli_query($conn, $sql2);
                 if (mysqli_num_rows($result2) === 1) {
                 $row2 = mysqli_fetch_assoc($result2);
+                echo "success1";
                 if($row2['aadharid'] === $aadhar_id)
                 {
                     $_SESSION['studentid']=$row2['studentid'];
                     $_SESSION['aadharid']=$row2['aadharid'];
                     $_SESSION['studentphno']=$row2['studentphno'];
                     $_SESSION['studentname']=$row2['studentname'];
-                    
-                    
-                header("Location: user.php");
+                    $_SESSION['year']=$row2['year'];
+                    $_SESSION['gender']=$row2['gender'];
+                    $_SESSION['branch']=$row2['branch'];
+                    echo "success";
+
+               
                 // exit();
                 }}}
                 else{

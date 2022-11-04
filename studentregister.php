@@ -1,12 +1,21 @@
 <?php
 session_start();
-if(isset($_SESSION['registersuccess'])){
-  echo "<script>alert('User Registration successfull')</script>";
-  unset($_SESSION['registersuccess']);
+
+if(isset($_SESSION['Emailexists'])){
+  echo "<script>alert('User already exists!')</script>";
+  unset($_SESSION['Emailexists']);
 }
-else if(isset($_SESSION['registerfailed'])){
+if(isset($_SESSION['errmsg'])){
+  echo "<script>alert('Email is not valid!!!')</script>";
+  unset($_SESSION['errmsg']);
+}
+if(isset($_SESSION['refailed'])){
   echo "<script>alert('username or password mismatched')</script>";
-  unset($_SESSION['registerfailed']);
+  unset($_SESSION['refailed']);
+}
+if(isset($_SESSION['registrationsuccess'])){
+  echo "<script>alert('Registration successful')</script>";
+  unset($_SESSION['registrationsuccess']);
 }
 ?>
 

@@ -89,20 +89,20 @@ if(isset($_SESSION['profileupdate'])){
                     <form action="profileupdate.php" method="post" class="profile-section-form">
                         <div class="profile-left-section">
                     <div class="p-one">
-                    <label for="userid">Student ID:</label><input type="text" value="<?php echo $_SESSION['studentid']; ?>" id="Studentid" name="studentid" required></div>
+                    <label for="userid">Student ID:</label><input type="text" value="<?php if(isset($_SESSION['studentid'])){echo $_SESSION['studentid']; }?>" id="Studentid" name="studentid" required></div>
                     <div class="p-one">
-                    <label for="Aadharid">Aadhar id:</label><input type="text" value="<?php echo $_SESSION['aadharid']; ?>" id="Aadharid" name="aadharid" required>
+                    <label for="Aadharid">Aadhar id:</label><input type="text" value="<?php if(isset($_SESSION['studentid'])){echo $_SESSION['aadharid']; }?>" id="Aadharid" name="aadharid" required>
                 </div>
                 <div class="p-one">
-                    <label for="studentname">Student Name:</label><input type="text" value="<?php echo $_SESSION['studentname']; ?>" id="studentname" name="studentname" required>
+                    <label for="studentname">Student Name:</label><input type="text" value="<?php if(isset($_SESSION['studentid'])){echo $_SESSION['studentname']; }?>" id="studentname" name="studentname" required>
                 </div>
                 <div class="p-one">
-                    <label for="studentphno">Student Phno:</label><input type="text" id="studentphno" value="<?php echo $_SESSION['studentphno']; ?>" name="studentphno" required>
+                    <label for="studentphno">Student Phno:</label><input type="text" id="studentphno" value="<?php if(isset($_SESSION['studentid'])){echo $_SESSION['studentphno']; }?>" name="studentphno" required>
                 </div>
                 <div class="p-one">
                   <label for="Year----">Year:</label>
                 <select name="year" id="year" class="select-profile-branch" required>
-                    <option value="">----select Year----</option>
+                    <option value=""><?php if(isset($_SESSION['studentid'])){echo $_SESSION['year']; }?></option>
                     <option value="puc">PUC</option>
                     <option value="e1">E1</option>
                     <option value="e2">E2</option>
@@ -113,7 +113,7 @@ if(isset($_SESSION['profileupdate'])){
                     <div class="p-one">
                       <label for="gender">Gender:</label>
                     <select name="gender" id="gender" class="select-profile-branch" required>
-                        <option value="">----select gender----</option>
+                        <option value=""><?php if(isset($_SESSION['studentid'])){echo $_SESSION['gender']; }?></option>
                         <option value="MALE">Male</option>
                         <option value="FEMALE">Female</option>
                         <option value="OTHERS">Others</option>
@@ -122,7 +122,7 @@ if(isset($_SESSION['profileupdate'])){
                 <div class="p-one">
                     <label for="branch">Branch:</label>
                     <select name="branch" id="branch" class="select-profile-branch">
-                        <option value="">----select gender----</option>  
+                        <option value=""><?php if(isset($_SESSION['studentid'])){echo $_SESSION['branch']; }?></option>  
                         <option value="PUC">Puc</option>
                         <option value="CSE">Cse</option>
                         <option value="ECE">Ece</option>
