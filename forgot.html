@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLMS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo"><a href="index.html">ONLINE LIBRARY MANAGEMENT SYSTEM</a> </div>
+  <!--------------------------------------- navigation bar starts here--------------------- -->
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#"> About us</a></li>
+            <li><a href="#"> Contact us</a></li>
+            <li><a href="#" class="register-nav-link"> Register</a></li>
+          </ul>
+        </nav>
+  <!--------------------------------------- navigation bar ends here--------------------- -->
+      </header>
+    </div>
+
+
+    <!------------------------------------ banner----------------------------------------------- -->
+    <div class="bannerright">
+        <h3>Welcome Back!</h3>
+        <h2>Login to continue OLMS</h2>
+        <form action="index.php" method="post" class="user">
+          <div class="login">
+            <input
+              type="email"
+              name="username"
+              placeholder="Email Address*"
+              required
+            />
+          </div>
+          <div class="AadharID">
+            <input
+              type="text"
+              name="username"
+              placeholder="Aadhar ID*"
+              required
+            />
+          <div class="pass">
+            <input class="new_password"
+              type="password"
+              name="New password"
+              id="password"
+              placeholder="New Password*"
+              required
+            /><i class="bi bi-eye-slash" id="togglePassword"></i>
+          </div>
+          <div class="pass">
+            <input class="retype_password"
+              type="password"
+              name="Reenter password"
+              id="password"
+              placeholder="Retype Password*"
+              required
+            /><i class="bi bi-eye-slash" id="togglePassword"></i>
+          </div>
+          
+          </div>
+          <div class="submit">
+            <input
+              class="submitbutton"
+              name="submit"
+              value="Reset"
+              type="submit"
+            />
+          </div>
+
+
+
+</body>
+</html>
