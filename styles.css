@@ -1,0 +1,554 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: #231955;
+}
+.container {
+  width: 90%;
+  align-items: center;
+  margin: auto;
+}
+header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/*--------------------------------------- navigation starts here--------------------------------------- */
+nav {
+  line-height: 70px;
+}
+.logo {
+  color: white;
+  font-size: x-large;
+  line-height: 70px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+}
+a {
+  font-weight: 500;
+  font-family: "poppins";
+  text-decoration: none;
+  color: white;
+}
+li a:hover {
+  color: #8976ee;
+  transition: 0.5s;
+}
+.register-nav-link:hover {
+  color: white;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}
+li {
+  margin-left: 40px;
+}
+.register-nav-link {
+  border: 1px solid #8976ee;
+  padding: 5px 10px 5px 10px;
+  background-color: #8976ee;
+  border-radius: 5px;
+}
+/*--------------------------------------- navigation ends here--------------------------------------- */
+h3 {
+  text-align: center;
+  padding-top: 8vh;
+}
+/*--------------------------------------- banner starts here--------------------------------------- */
+.banner {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  background-color: #231955;
+}
+.bannerleft {
+  width: 70%;
+  height: 90vh;
+}
+.bannerright {
+  border-radius: 30px;
+  margin-top: 5vh;
+  height: 65vh;
+  width: 30%;
+  background-color: white;
+  margin-right: 100px;
+}
+
+.login,
+.pass,
+.AadharID {
+  margin: auto;
+  margin-top: 20px;
+  display: inline-block;
+}
+.submit {
+  margin: auto;
+  margin-top: 20px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding-left: 5px;
+  height: 30px;
+  width: 300px;
+  padding-top: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.submit-button {
+  background-color: #8976ee;
+  color: white;
+  font-family: "poppins";
+  font-weight: 600;
+  height: 40px;
+  width: 200px;
+  /* padding-left: 200px; */
+}
+.submit input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.login-submit {
+  text-align: center;
+  padding-top: 20px;
+}
+.for {
+  color: #0096ff;
+  font-size: 13px;
+}
+.forgot {
+  width: 300px;
+  margin: auto;
+  margin-top: 5px;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+.user-profile{
+  line-height: 70px;
+  color: white;
+}
+h3 {
+  font-family: "poppins";
+  color: #231955;
+  text-align: center;
+  font-size: 23px;
+}
+h2 {
+  font-family: "poppins";
+  font-size: 15px;
+  color: #231955;
+  text-align: center;
+  font-weight: 300;
+}
+.check {
+  height: 12px;
+  width: 12px;
+  margin-right: 2px;
+}
+.checkname {
+  color: #0096ff;
+}
+.register {
+  margin-left: 65px;
+  margin-top: 45px;
+}
+.registerlink {
+  color: #0096ff;
+  font-size: 13px;
+  margin-left: 5px;
+}
+.allrights,
+.rgukt {
+  color: white;
+}
+.allrights {
+  margin-left: 60px;
+}
+.rgukt {
+  margin-right: 60px;
+}
+/*--------------------------------------- footer starts here--------------------------------------- */
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.banner-image {
+  height: 50vh;
+  width: 50%;
+  margin-top: 15vh;
+  background-image: url("images/bannerleft.png");
+  background-size: cover;
+  background-position: center;
+  margin-left: 200px;
+}
+img {
+  height: 60vh;
+  width: 50%;
+}
+/*--------------------------------------- footer ends here--------------------------------------- */
+/*--------------------------------------- banner ends here--------------------------------------- */
+form i {
+  margin-left: -30px;
+  cursor: pointer;
+}
+.password {
+  margin-left: -15px;
+}
+
+/* -----------------------------Home page css starts here------------------------------------------------ */
+/*------------------------------------ banner css starts here ------------------------------------ */
+.homepage-banner {
+  width: 100%;
+  height: 86vh;
+  background-image: url("images/lms2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.homepage-banner-layer {
+  width: 100%;
+  height: 86vh;
+  /* padding-left: 35px; */
+  background-color: #23195581;
+  display: flex;
+  /* background-color: red; */
+  /* justify-content: space-around; */
+}
+.homepage-banner-left {
+  width: 50%;
+  padding-left: 35px;
+  height: 60vh;
+}
+.homepage-banner-right {
+  height: 60vh;
+  width: 50%;
+  padding-left: 40px;
+}
+.homepage-banner-left h1,
+.homepage-banner-right h1 {
+  color: white;
+  margin-left: 5%;
+  /* text-align: ; */
+  width: 100%;
+  /* background-color: red; */
+  font-family: "poppins";
+  font-weight: 500;
+  padding-top: 15vh;
+}
+.homepage-banner-right h1 {
+  margin-right: 5%;
+}
+.homepage-banner-content-left,
+.homepage-banner-content-right {
+  margin-left: 5%;
+  width: 100%;
+  color: white;
+  margin-top: 20px;
+  font-family: "poppins";
+  font-weight: 300;
+}
+.homepage-banner-right {
+  width: 40%;
+}
+.homepage-banner-content-right {
+  margin-right: 5%;
+}
+.homepage-footer {
+  font-family: "poppins";
+  font-weight: 400;
+  font-size: small;
+  display: flex;
+  line-height: 25px;
+  background-color: #231955;
+  justify-content: space-between;
+  color: white;
+}
+
+/*------------------------------------------ userpage css starts here --------------------------------------------- */
+.user-banner-left,
+.admin-banner-left {
+  border-start-end-radius: 20px;
+  height: 90vh;
+  width: 20%;
+  background-color: #411530;
+  background-image: url("images/s1.jpg");
+  background-size: cover;
+  background-blend-mode: color-burn;
+  background-position: center;
+}
+.icon {
+  margin-right: 5px;
+}
+.user-banner-data,
+.admin-banner-data {
+  display: flex;
+  flex-direction: column;
+}
+.user-banner-icon-data,
+.admin-banner-icon-data {
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+.user-banner-icon-data:hover,
+.admin-banner-icon-data:hover {
+  border-start-end-radius: 20px;
+  border-end-end-radius: 20px;
+  background-color: #c8c3e450;
+}
+
+
+/* .user-image:hover,
+.admin-image:hover {
+  width: 60px;
+  height: 20px;
+  box-shadow: 1px 1px 10px #0096ff;
+} */
+.user-log{
+  /* background-color: red; */
+  color: white;
+      border: 1px solid #8976ee;
+    padding: 5px 10px 5px 10px;
+    background-color: #8976ee;
+    border-radius: 5px;
+    margin-right: 30px;
+  /* border: 1px solid black; */
+}
+.user-logout,
+.admin-logout {
+  color: white;
+  font-family: "poppins";
+  background-color: #411530;
+  background-image: url("images/s1.jpg");
+  background-size: cover;
+  background-blend-mode: color-burn;
+  border-start-end-radius: 20px;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 20px;
+  color: white;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+.user-log:hover,
+.admin-log:hover {
+  box-shadow: 1px 1px 10px black;
+}
+
+.user-banner-right,
+.admin-banner-right {
+  width: 80%;
+  position: relative;
+  z-index: 0;
+  /* background-color: red; */
+}
+.user-banner,
+.admin-banner {
+  width: 100%;
+  display: flex;
+}
+.user-banner-right-data h2 {
+  color: white;
+  font-family: "poppins";
+  font-size: large;
+  font-weight: 600;
+  padding-top: 20px;
+}
+.searchbookslabel {
+  color: white;
+  margin-right: 5px;
+  font-family: "poppins";
+  font-size: large;
+}
+.search-books-submit {
+  width: 100px;
+  /* padding-right: 0px; */
+  margin-left: 2px;
+  background-color: #411530;
+  color: white;
+  border-style: none;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40px;
+}
+.search-icon {
+  color: white;
+  margin-left: -90px;
+}
+.searchbooks {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* --------------------------------------- about us ------------------------------------------ */
+.contactus-main-wrapper,
+.contactus-main-wrapper2 {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-family: "poppins";
+}
+.contactus-wrapper1,
+.contactus-wrapper2,
+.contactus-wrapper3,
+.contactus-wrapper4 {
+  height: 31vh;
+  width: 20%;
+  background-color: #3d3275;
+  margin-bottom: 10px;
+  margin-top: 7vh;
+}
+.role {
+  text-align: right;
+  margin: 10px;
+  font-size: medium;
+}
+.photo {
+  height: 110px;
+  width: 110px;
+  background-color: white;
+  margin: auto;
+  border-radius: 100px;
+}
+.name {
+  margin: 0px 10px 10px 10px;
+  font-size: large;
+}
+.name-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.contactus-footer-hr {
+  margin-top: 7vh;
+}
+
+/* ----------------------------- apply css starts here ---------------------------------------*/
+.user-banner-right {
+  height: 90vh;
+  width: 80%;
+}
+.book-apply-heading {
+  color: white;
+  font: "poppins";
+  text-align: center;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: large;
+  margin-bottom: 10px;
+}
+
+.one,
+.two {
+  width: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.books-apply {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-family: "poppins";
+  margin-top: 5vh;
+}
+.books-apply-form input {
+  width: 100%;
+}
+.submit {
+  width: 100%;
+  height: 37px;
+  margin-top: 25px;
+  cursor: pointer;
+  background-color: white;
+  font-family: "poppins";
+  font-weight: 700;
+  color: #231955;
+  font-size: small;
+}
+/*------------------------------------ profile sectiion starts here --------------------------------- */
+.profile-section {
+  width: 100%;
+  /* background-color: red; */
+  color: white;
+  /* display: flex; */
+}
+.profile-left-section {
+  width: 50%;
+  /* background-color: red; */
+  margin-left: 20px;
+  /* margin-top: 10px; */
+}
+.profile-right-section {
+  width: 50%;
+  height: 80vh;
+  text-align: center;
+}
+
+.p-one {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+  font-family: "poppins";
+}
+.select-profile-branch,
+.select-profile-gender {
+  width: 100%;
+  height: 35px;
+  border-radius: 10%;
+}
+.p-one .a {
+  color: red;
+  /* font-family: 'poppins'; */
+  width: 100%;
+}
+.profile-section-form {
+  display: flex;
+  /* margin-left: 20px; */
+}
+
+.profile-section-image {
+  height: 40vh;
+  width: 50%;
+  border-radius: 50%;
+  margin-top: 10vh;
+  border: 5px solid #0096ff;
+}
+
+.profile-update {
+  margin-top: 22vh;
+  height: 30px;
+  /* background-color: white; */
+}
+.profile-submit {
+  cursor: pointer;
+  background-color: white;
+  font-family: "poppins";
+  font-weight: 700;
+  color: #231955;
+  font-size: small;
+}
+.booksearch{
+  color: white;
+  margin-top: 15px;
+  font-family: 'poppins';
+}
+/* ----------------------------------- admin page css starts here ---------------------------------------------- */
+
+.admin-banner-right-data h2 {
+  color: white;
+  font-family: "poppins";
+  font-size: large;
+  font-weight: 600;
+  padding-top: 20px;
+}
